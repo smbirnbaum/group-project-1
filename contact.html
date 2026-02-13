@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DJ Night | Contact</title>
+
+  <!-- 2 typsnitt: rubrik + brödtext -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Ikoner (sociala medier + kontakt) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <!-- Externt animationsbibliotek -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <!-- Extern SVG-fil -->
+        <img class="badge" src="images/badge.svg" alt="Badge">
+        <span class="brand-text">DJ<span class="brand-accent">Night</span></span>
+      </a>
+
+      <!-- Hover-effekt på nav-länkar (main color) -->
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Landing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link is-active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="page-hero">
+      <!-- animate.css: slide in -->
+      <h1 class="h1 animate__animated animate__slideInUp">Contact us</h1>
+      <p class="lead">Bokning eller frågor? Skicka ett meddelande.</p>
+    </section>
+
+    <section class="grid-2">
+      <article class="card animate__animated animate__slideInUp">
+        <h2 class="h2">Kontaktformulär</h2>
+        <p class="muted">Fält med * är obligatoriska.</p>
+
+        <!-- Validering i JS (lektion 8-stil) -->
+        <form id="contactForm" class="form" novalidate>
+          <div class="field">
+            <label for="name">Namn *</label>
+            <input id="name" class="input" type="text" required minlength="2" placeholder="Ditt namn">
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">E-post *</label>
+            <input id="email" class="input" type="email" required placeholder="namn@email.com">
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Meddelande *</label>
+            <textarea id="message" class="input textarea" rows="5" required minlength="10"
+              placeholder="Berätta om eventet..."></textarea>
+            <small class="error" id="messageError"></small>
+          </div>
+
+          <button class="btn" type="submit">
+            Skicka <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+          <p class="success" id="successMsg" aria-live="polite"></p>
+        </form>
+      </article>
+
+      <aside class="stack">
+        <article class="card">
+          <h2 class="h2">Kontaktuppgifter</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a class="link" href="mailto:booking@djnighthub.com">booking@djnighthub.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a class="link" href="tel:+46701234567">+46 70 123 45 67</a>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2 class="h2">Sociala medier</h2>
+          <div class="socials">
+            <a class="social" href="#"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+            <a class="social" href="#"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
+            <a class="social" href="#"><i class="fa-brands fa-soundcloud"></i><span>SoundCloud</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="h2">Basområde (karta)</h2>
+          <div class="map">
+            <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Stockholm&output=embed"></iframe>
+          </div>
+        </article>
+      </aside>
+    </section>
+
+    <!-- Bildsektion längst ner (visar att alla bilder hanteras i images/) -->
+    <section class="contact-gallery">
+      <img src="images/hero.jpg" alt="Techno crowd hero">
+      <img src="images/turntable.jpg" alt="DJ turntable">
+      <img src="images/gallery-1.jpg" alt="Techno crowd">
+      <img src="images/gallery-2.jpg" alt="DJ performance">
+      <img src="images/gallery-3.jpg" alt="Club lights">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© DJNight</span>
+      <div class="footer-links">
+        <a class="footer-link" href="gallery.html">Gallery</a>
+        <a class="footer-link" href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Enkel formvalidering: required + minlength + email-format
+    const form = document.getElementById("contactForm");
+    const nameEl = document.getElementById("name");
+    const emailEl = document.getElementById("email");
+    const messageEl = document.getElementById("message");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+    const successMsg = document.getElementById("successMsg");
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      nameError.textContent = "";
+      emailError.textContent = "";
+      messageError.textContent = "";
+      successMsg.textContent = "";
+
+      let ok = true;
+
+      if (nameEl.value.trim().length < 2) { nameError.textContent = "Skriv minst 2 tecken."; ok = false; }
+      if (!emailRegex.test(emailEl.value.trim())) { emailError.textContent = "Skriv en giltig e-post."; ok = false; }
+      if (messageEl.value.trim().length < 10) { messageError.textContent = "Skriv minst 10 tecken."; ok = false; }
+
+      if (ok) {
+        successMsg.textContent = "Tack! Ditt meddelande är skickat.";
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
