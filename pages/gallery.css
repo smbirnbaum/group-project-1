@@ -1,30 +1,42 @@
 
 .body {
-    background-color: #D2B8F2;
+    background-image:url(../images/gallery-background.avif);
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
+    padding: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .heading{
       font-family: "Karla", sans-serif;
       font-size: 52px;
       letter-spacing: 2px;
-}
+      border-bottom: black dashed 7px;
+      padding-bottom: 50px;
+    }
 
 .text-content {
      font-family: "Lato", sans-serif;
      font-size: 22px;
      letter-spacing: 2px;
+     
 }
 
-.header {
+.content {
     background-color: #d8f2b8;
-    border-bottom: black;
-    border-style: dashed;
-    border-width: 10px;
+    border-bottom: black dashed 10px;
+    align-items: flex-start;
+    padding: 10px;
 
 }
 
