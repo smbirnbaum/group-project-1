@@ -1,6 +1,6 @@
 
 .body {
-    background-image:url(../images/gallery-background.avif);
+    background-image:url(../images/gallery/gallery-background.avif);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -11,11 +11,6 @@
     background-repeat: no-repeat;
 }
 
-.flex-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
 .heading{
       font-family: "Karla", sans-serif;
@@ -23,13 +18,15 @@
       letter-spacing: 2px;
       border-bottom: black dashed 7px;
       padding-bottom: 50px;
-    }
+}
 
 .text-content {
-     font-family: "Lato", sans-serif;
-     font-size: 22px;
-     letter-spacing: 2px;
-     
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .content {
@@ -37,7 +34,14 @@
     border-bottom: black dashed 10px;
     align-items: flex-start;
     padding: 10px;
+}
 
+.images {
+    width: 50px;
+    height: 40px;
+    background-color: #D2B8F2;
+    width: 100%;
+    display: flex;
 }
 
 
