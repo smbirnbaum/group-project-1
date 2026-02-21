@@ -4,6 +4,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
     padding: 70px;
@@ -12,7 +13,7 @@
 }
 
 
-.heading{
+.h1{
       font-family: "Karla", sans-serif;
       font-size: 52px;
       letter-spacing: 2px;
@@ -36,12 +37,19 @@
     padding: 10px;
 }
 
-.images {
-    width: 50px;
-    height: 40px;
+.grid-container {
     background-color: #D2B8F2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;   
+    background-color: #714A78;
+}
+
+.grid-container img {
     width: 100%;
-    display: flex;
+    height: auto;
+    object-fit: cover;
 }
 
 
