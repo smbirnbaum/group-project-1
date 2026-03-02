@@ -1,0 +1,56 @@
+
+.body {
+    background-image:url(../images/gallery/gallery-background.avif);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.h1{
+      font-family: "Karla", sans-serif;
+      font-size: 52px;
+      letter-spacing: 2px;
+      border-bottom: black dashed 7px;
+      padding-bottom: 50px;
+}
+
+.text-content {
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    background-color: #d8f2b8;
+    border-bottom: black dashed 10px;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.grid-container {
+    background-color: #D2B8F2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;   
+    background-color: #714A78;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+

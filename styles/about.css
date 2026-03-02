@@ -1,0 +1,101 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    min-height: 100vh;
+    background: black;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    color: #d8f2b8;
+    font-size: 48px;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    margin: 50px;
+}
+
+.img1 {
+    width: 100%;
+    max-width: 682px;
+    max-height: 455px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: right;
+    gap: 32px;
+}
+
+.nav__list {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #d8f2b8;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.nav__list a {
+  text-decoration: none;
+  color: #d8f2b8;
+}
+
+.nav__list a:visited {
+  color: #d8f2b8;
+}
+
+.nav__list a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    justify-content: left;
+    padding: 50px;
+    gap: 50px;
+}
+
+.textbox {
+    max-width: 550px;
+}
+
+button {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    min-height: 39px;
+    min-width: 131px;
+    background: #714A78;
+    color: #D8F2B8;
+    border: 2px solid #D8F2B8;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    background-color: #D8F2B8;
+    color: #714A78;
+    cursor: pointer;
+}
