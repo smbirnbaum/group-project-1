@@ -1,6 +1,6 @@
 
 .body {
-    background-image:url(../images/gallery/gallery-background.avif);
+    background-image: url(../images/gallery-background.avif);
     height: 100%;
     display: flex;
     justify-content: center;
