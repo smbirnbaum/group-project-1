@@ -1,5 +1,5 @@
 
-.body {
+body {
     background-image: url(../images/gallery-background.avif);
     height: 100%;
     display: flex;
@@ -38,10 +38,10 @@
 }
 
 .grid-container {
-    background-color: #D2B8F2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    grid-gap: 10px;
     padding: 10px;   
     background-color: #714A78;
 }
@@ -49,7 +49,6 @@
 .grid-container img {
     width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
 
