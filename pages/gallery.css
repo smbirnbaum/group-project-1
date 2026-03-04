@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(../images/gallery-background.avif);
+    background-image: url(../images/gallery/background-1.jpg);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -49,6 +49,14 @@ body {
 .grid-container img {
     width: 100%;
     height: auto;
+}
+
+.image {
+    transition: transform 0.4s ease-in-out, filter 0.8s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.07); 
 }
 
 
