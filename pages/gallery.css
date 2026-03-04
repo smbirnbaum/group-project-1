@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(../images/gallery/background-1.jpg);
+    
     height: 100%;
     display: flex;
     justify-content: center;
@@ -8,8 +8,7 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 70px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #080129;
 }
 
 
@@ -17,8 +16,9 @@ body {
       font-family: "Karla", sans-serif;
       font-size: 52px;
       letter-spacing: 2px;
-      border-bottom: black dashed 7px;
       padding-bottom: 50px;
+      color: #EAE4F0;
+      text-align: center;
 }
 
 .text-content {
@@ -28,13 +28,16 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    color: #EAE4F0;
+    text-align: center;
+    background-color: #080129;
 }
 
 .content {
-    background-color: #d8f2b8;
-    border-bottom: black dashed 10px;
+    border-bottom: #EAE4F0 dashed 10px;
     align-items: flex-start;
     padding: 10px;
+    background-image: url(../images/gallery/background-2.jpg);
 }
 
 .grid-container {
@@ -43,7 +46,7 @@ body {
     grid-template-rows: repeat (3, 1fr);
     grid-gap: 10px;
     padding: 10px;   
-    background-color: #714A78;
+    background-color: #d8f2b8;
 }
 
 .grid-container img {
