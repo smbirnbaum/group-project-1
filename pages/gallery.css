@@ -31,13 +31,17 @@ body {
     color: #EAE4F0;
     text-align: center;
     background-color: #080129;
+    font-weight: 400;
 }
 
 .content {
-    border-bottom: #EAE4F0 dashed 10px;
     align-items: flex-start;
     padding: 10px;
     background-image: url(../images/gallery/background-2.jpg);
+    border-style:dotted;
+    border-color: #EAE4F0;
+    border-width: 1px;
+    border-radius: 8px;
 }
 
 .grid-container {
@@ -56,11 +60,38 @@ body {
 
 .image {
     transition: transform 0.4s ease-in-out, filter 0.8s ease-in-out;
+    border-radius: 10px;
 }
 
 .image:hover {
     transform: scale(1.07); 
 }
 
+.list-item {
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #EAE4F0;
+    text-decoration: none;
 
+}
 
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    margin: 30px;
+    justify-content: center;
+}
+
+.list-item:hover {
+    color: #d8f2b8;
+}
