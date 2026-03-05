@@ -2,7 +2,12 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    font-family: "Abril Fatface", serif;
+    font-size: 26px;
+    color: #D8F2B8;
 }
 
 .hero{
@@ -14,11 +19,87 @@
 }
 
 .hero img{
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+
+.star {
+    position: absolute;
+    background: #d7f0b4;
+    border: 2px solid #111;
+    display: grid;
+    place-items: center;
+    clip-path: polygon( 
+        50% 0%,
+        62% 18%,
+        85% 10%,
+        75% 30%,
+        100% 35%,
+        78% 50%,
+        100% 65%,
+        75% 70%,
+        85% 90%,
+        62% 82%,
+        50% 100%,
+        38% 82%,
+        15% 90%,
+        25% 70%,
+        0% 65%,
+        22% 50%,
+        0% 35%,
+        25% 30%,
+        15% 10%,
+        38% 18%
+    );
+    pointer-events: auto;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    transform-origin: center;
+}
+
+.star__text {
+    text-align: center;
+    font-weight: 800;
+    line-height: 1.05;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-family: "Abril Fatface", serif;
+    color: #37153E;
+    transition: transform 180ms ease;
+}
+
+.star:hover{
+    transform: scale(1.08) rotate(var(--rot, 0deg));
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+}
+
+.star-1 {
+    width: 220px;
+    height: 220px;
+    top: 90px;
+    right: 170px;
+    transform: rotate(-12deg);
+}
+
+.star-2 {
+    width: 150px;
+    height: 150px;
+    top: 190px;
+    right: 60px;
+    transform: rotate(8deg);
+}
+
+.star-2 .star__text {
+  font-size: 18px;
+}
 
 header {
     position: absolute;
@@ -31,6 +112,7 @@ header {
     align-items: center;
     padding: 20px;
     color: #D8F2B8;
+    font-size: 20px;
 }
 
 nav ul {
@@ -39,17 +121,26 @@ nav ul {
     gap: 30px;
     margin-right: 50px;
     padding: 0;
+    font-family: "Lato", sans-serif;
 }
 
 nav a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    transition: transform 150ms ease, color 150ms ease;
+    transform-origin: center;
+}
+
+nav a:hover {
+    color: #37153E;
+    transform: scale(1.08);
 }
 
 .hero-panel{
     max-width: 100%;
     z-index: 1;
-    height: 30vh;
+    height: 45vh;
     background: linear-gradient(90deg, #d8f2b8 0%, #5a2a66 100%);
 }
 
@@ -58,18 +149,25 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 28px 48px;
-    gap: 40px;
+    padding: 28px 50px;
+    margin-top: -60px;
+    font-family: "Abril Fatface", serif;
 }
 
 .title {
     color: #552E5D;
     font-size: 28px;
+    font-family: "Abril Fatface", serif;
+    flex: 0 0 45% ;
 }
 
 .description {
     color: #D8F2B8;
-    font-size: 22px;
+    font-size: 24px;
+    font-family: "Lato", sans-serif;
+    font-size: normal;
+    font-weight: 300;
+    flex: 0 0 50% ;
 }
 
 .btn-container {
@@ -86,11 +184,13 @@ nav a {
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.2) ;
     width: 300px;
-    color: #552E5D;
+    color: #D8F2B8;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
     transition: all 0.3s ease; 
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .btn:hover {
